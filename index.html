@@ -1,452 +1,662 @@
 <!doctype html>
-<html lang="zh">
+<html lang="zh-CN">
   <head>
-    <meta name="description" content="叶肇才个人简历" />
-    <meta name="author" content="yxc" />
-    <meta name="keywords" content="yxc,resume,Html,JavaScript,Vue,React" />
-    <link rel="icon" href="./favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta charset="utf-8" />
-    <title>叶肇才个人简历</title>
-    <meta name="next-head-count" content="3" />
-    <link
-      rel="preload"
-      href="./_next/static/css/42f1fdc37746f30d.css"
-      as="style"
-    />
-    <link
-      rel="stylesheet"
-      href="./_next/static/css/42f1fdc37746f30d.css"
-      data-n-g=""
-    />
-    <link
-      rel="preload"
-      href="./_next/static/css/bf145a2c96b87470.css"
-      as="style"
-    />
-    <link
-      rel="stylesheet"
-      href="./_next/static/css/bf145a2c96b87470.css"
-      data-n-p=""
-    />
-    <noscript data-n-css=""></noscript>
-    <script
-      defer=""
-      nomodule=""
-      src="./_next/static/chunks/polyfills-5cd94c89d3acac5f.js"
-    ></script>
-    <script
-      src="./_next/static/chunks/webpack-55693614bffc303c.js"
-      defer=""
-    ></script>
-    <script
-      src="./_next/static/chunks/framework-1416e697a2f7b973.js"
-      defer=""
-    ></script>
-    <script
-      src="./_next/static/chunks/main-d29e5be202221791.js"
-      defer=""
-    ></script>
-    <script
-      src="./_next/static/chunks/pages/_app-98c4b2b4327279b9.js"
-      defer=""
-    ></script>
-    <script
-      src="./_next/static/chunks/pages/index-8c136eba25b7f27d.js"
-      defer=""
-    ></script>
-    <script
-      src="./_next/static/nXh7iDkKmDngM44Drni1J/_buildManifest.js"
-      defer=""
-    ></script>
-    <script
-      src="./_next/static/nXh7iDkKmDngM44Drni1J/_ssgManifest.js"
-      defer=""
-    ></script>
-    <script
-      src="./_next/static/nXh7iDkKmDngM44Drni1J/_middlewareManifest.js"
-      defer=""
-    ></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>叶肇才 — 前端开发工程师</title>
+    <style>
+      :root {
+        --bg: #000000;
+        --card-bg: #050505;
+        --border: rgba(255, 255, 255, 0.06);
+        --border-hover: rgba(255, 255, 255, 0.18);
+        --text-main: #ffffff;
+        --text-muted: #888888;
+        --accent: #2ecc71;
+        --accent-dim: rgba(46, 204, 113, 0.08);
+        --accent-glow: rgba(46, 204, 113, 0.15);
+        --meta-code: #555555;
+        --divider: rgba(255, 255, 255, 0.06);
+        --tag-bg: rgba(46, 204, 113, 0.06);
+        --tag-border: rgba(46, 204, 113, 0.12);
+      }
+
+      @media (prefers-color-scheme: light) {
+        :root {
+          --bg: #ffffff;
+          --card-bg: #f9f9f9;
+          --border: rgba(0, 0, 0, 0.06);
+          --border-hover: rgba(0, 0, 0, 0.16);
+          --text-main: #111111;
+          --text-muted: #666666;
+          --accent: #4ade80;
+          --accent-dim: rgba(74, 222, 128, 0.06);
+          --accent-glow: rgba(74, 222, 128, 0.1);
+          --meta-code: #999999;
+          --divider: rgba(0, 0, 0, 0.06);
+          --tag-bg: rgba(74, 222, 128, 0.06);
+          --tag-border: rgba(74, 222, 128, 0.12);
+        }
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", "PingFang SC",
+          "Noto Sans SC", "Microsoft YaHei", sans-serif;
+        background: var(--bg);
+        color: var(--text-main);
+        line-height: 1.7;
+        font-size: 14px;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 60px 24px 80px;
+      }
+
+      /* ── Typography ── */
+      h1 {
+        font-size: 28px;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        color: var(--text-main);
+        margin-bottom: 4px;
+      }
+
+      h2 {
+        font-size: 16px;
+        font-weight: 600;
+        color: var(--text-main);
+        letter-spacing: -0.01em;
+        margin-bottom: 12px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      h2::before {
+        content: "";
+        display: inline-block;
+        width: 4px;
+        height: 18px;
+        background: var(--accent);
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      h3 {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-main);
+        margin-bottom: 6px;
+      }
+
+      h4 {
+        font-size: 14px;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 4px;
+      }
+
+      p {
+        margin-bottom: 8px;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+        transition: opacity 0.15s ease;
+        word-break: break-all;
+      }
+
+      a:hover {
+        opacity: 0.75;
+      }
+
+      strong {
+        font-weight: 600;
+        color: var(--text-main);
+      }
+
+      ul {
+        list-style: none;
+        padding-left: 0;
+      }
+
+      ul li {
+        position: relative;
+        padding-left: 18px;
+        margin-bottom: 5px;
+        color: var(--text-muted);
+        font-size: 13.5px;
+        line-height: 1.75;
+      }
+
+      ul li::before {
+        content: "";
+        position: absolute;
+        left: 2px;
+        top: 9px;
+        width: 5px;
+        height: 5px;
+        background: var(--accent);
+        border-radius: 50%;
+        opacity: 0.5;
+      }
+
+      ul li strong {
+        color: var(--text-main);
+      }
+
+      /* ── Header ── */
+      .header {
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--divider);
+        margin-bottom: 32px;
+      }
+
+      .header .subtitle {
+        font-size: 14px;
+        color: var(--accent);
+        font-weight: 500;
+        margin-bottom: 12px;
+      }
+
+      .header .meta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 20px;
+        color: var(--text-muted);
+        font-size: 13px;
+      }
+
+      .header .meta-row span {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+      }
+
+      .header .meta-row .sep {
+        color: var(--meta-code);
+      }
+
+      /* ── Sections ── */
+      .section {
+        padding-bottom: 28px;
+        border-bottom: 1px solid var(--divider);
+        margin-bottom: 28px;
+      }
+
+      .section:last-of-type {
+        border-bottom: none;
+      }
+
+      .summary-block {
+        padding: 0;
+        font-size: 13.5px;
+        color: var(--text-muted);
+        line-height: 1.8;
+      }
+
+      /* ── Skills ── */
+      .skill-list {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .skill-item {
+        font-size: 13px;
+        line-height: 1.6;
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+      }
+
+      .skill-item .skill-label {
+        font-weight: 600;
+        color: var(--accent);
+        white-space: nowrap;
+      }
+
+      .skill-item .skill-desc {
+        color: var(--text-muted);
+        font-size: 13px;
+      }
+
+      /* ── Experience ── */
+      .exp-block {
+        margin-bottom: 24px;
+      }
+
+      .exp-block:last-child {
+        margin-bottom: 0;
+      }
+
+      .exp-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        flex-wrap: wrap;
+        gap: 4px 12px;
+        margin-bottom: 6px;
+      }
+
+      .exp-header .company {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--text-main);
+      }
+
+      .exp-header .duration {
+        font-size: 13px;
+        color: var(--accent);
+        font-weight: 500;
+        white-space: nowrap;
+      }
+
+      .exp-desc {
+        font-size: 13px;
+        color: var(--text-muted);
+        margin-bottom: 10px;
+        font-style: italic;
+      }
+
+      .exp-project {
+        margin-top: 10px;
+      }
+
+      .exp-project .proj-name {
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 13.5px;
+        margin-bottom: 4px;
+      }
+
+      /* ── Project Links ── */
+      .project-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+      }
+
+      .project-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 0;
+        font-size: 13px;
+        color: var(--accent);
+        text-decoration: none;
+        transition: opacity 0.15s ease;
+      }
+
+      .project-link:hover {
+        opacity: 0.75;
+      }
+
+      .project-link .label {
+        color: var(--text-muted);
+        font-size: 12px;
+      }
+
+      /* ── Print ── */
+      @media print {
+        @page {
+          margin: 15mm;
+        }
+        body {
+          padding: 0;
+          max-width: 100%;
+          font-size: 12px;
+        }
+        .header {
+          border-bottom: none;
+          margin-bottom: 20px;
+          padding-bottom: 0;
+        }
+        .section {
+          border-bottom: none;
+          margin-bottom: 16px;
+          padding-bottom: 0;
+        }
+        .exp-block {
+          margin-bottom: 16px;
+        }
+        .exp-block:last-child {
+          margin-bottom: 0;
+        }
+        .summary-block {
+          padding: 0;
+        }
+        h2 {
+          break-after: avoid;
+          margin-bottom: 8px;
+        }
+        .exp-header {
+          break-after: avoid;
+        }
+        .proj-name {
+          break-after: avoid;
+        }
+        ul {
+          orphans: 3;
+          widows: 3;
+        }
+        ul li {
+          margin-bottom: 2px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div id="__next">
-      <div class="Home_home__V_V4i">
-        <main>
-          <h1 class="Home_name__Je8n6">叶肇才</h1>
-          <div class="Home_info__dvX16">前端开发</div>
-          <div class="Home_container__bCOhY">
-            <h2 class="Home_title__T09hD">关于我</h2>
-            <h3 class="Home_small-title__8mrKB">联系方式</h3>
-            <ul>
-              <li><p>电话：+8615622281238</p></li>
-              <li><p>邮箱：565294508@qq.com</p></li>
-              <li><p>QQ：565294508</p></li>
-              <li>
-                <p>
-                  简历地址：<a
-                    class="Home_url___Y6da"
-                    href="https://yxc5354.github.io/yxc-resume/"
-                    >https://yxc5354.github.io/yxc-resume/</a
-                  >
-                </p>
-              </li>
-            </ul>
-            <h3 class="Home_small-title__8mrKB">教育经历</h3>
-            <ul>
-              <li>
-                <span>广州大学华软软件学院</span
-                ><span class="Home_teach__aTBDy"
-                  >软件工程2018届    本科全日制学信网可查</span
-                >
-              </li>
-            </ul>
-          </div>
-          <div class="Home_container__bCOhY">
-            <h2 class="Home_title__T09hD">技术栈</h2>
-            <ul>
-              <li><p>JavaScript（ES6+）、TypeScript、HTML5、CSS3</p></li>
-              <li>
-                <p>
-                  Vue2 / Vue3、React
-                  Hooks项目开发经验，能够在不同技术栈下完成业务开发
-                </p>
-              </li>
-              <li>
-                <p>
-                  具备跨端开发经验（UniApp、Taro），支持 H5 /
-                  小程序等多端业务场景
-                </p>
-              </li>
-              <li>
-                <p>SSR 开发经验（Nuxt、Next） 与 SEO 实践经验，如本简历</p>
-              </li>
-              <li>
-                <p>
-                  Node.js （express、koa2）基础开发经验（接口开发与数据处理）
-                </p>
-              </li>
-              <li>
-                <p>
-                  熟悉常用 UI 组件库（Element Plus、Vant、Naive
-                  等）、能基于业务进行二次封装
-                </p>
-              </li>
-              <li>
-                <p>
-                  WebSocket 实践经验（socket.io），支持实时消息与数据同步场景
-                </p>
-              </li>
-              <li>
-                <p>
-                  按需使用AI工具（如ChatGPT、GitHub
-                  Copilot等）辅助开发，提升开发效率与代码质量
-                </p>
-              </li>
-            </ul>
-          </div>
-          <div class="Home_container__bCOhY">
-            <h2 class="Home_title__T09hD">工作经历</h2>
-            <ul>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  中国南方航空（驻场开发）<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                    >2022.04 - 2026.04</span
-                  >
-                </p>
-                <div>
-                  <p>
-                    2023年从零开始参与南航ICARE自愿报告平台，完成移动端、网页端及后台管理等多端开发
-                  </p>
-                  <p>
-                    2022年参与南航LeAPS云机务系统的开发（Vue2），日常维护以及版本迭代
-                  </p>
-                  <p>
-                    负责核心需求的技术架构拆解、任务分配与排期把控，主导前端规范制定与
-                    Code Review
-                  </p>
-                  <p>
-                    支援南航e家管理中台系统（React），参与模块实现及历史问题修复
-                  </p>
-                  <p>支援迁移发动机管理项目到新框架</p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  广州滴普科技有限公司<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                    >2020.10 - 2021.08</span
-                  >
-                </p>
-                <div>
-                  <p>负责官网系列及相关业务产品页面开发与功能实现</p>
-                  <p>
-                    参与需求评审，对产品需求进行分析与拆解，协助任务拆分与排期
-                  </p>
-                  <p>参与代码评审，保证代码质量与规范统一</p>
-                  <p>定期参与技术分享，提升团队整体开发效率与技术水平</p>
-                  <p>支持 SSR 场景开发，配合实现 SEO 相关需求</p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  广州链能科技有限公司<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                    >2019.09 - 2020.09</span
-                  >
-                </p>
-                <div>
-                  <p>
-                    担任智慧能源管理平台核心开发，主导数据可视化大屏及关键业务模块建设
-                  </p>
-                  <p>
-                    深度参与设备实时数据展示系统开发，建立公共逻辑抽离与动态配置机制，大幅提升同类页面的交付速度
-                  </p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  赞同科技股份有限公司<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                    >2018.12 - 2019.09</span
-                  >
-                </p>
-                <div>
-                  <p>
-                    负责核心银行业务线——广东农信移动营销平台的前端开发与交付
-                  </p>
-                  <p>
-                    推动需求按期交付，高度配合测试团队完成严格的验收流程，并基于一线用户反馈持续优化产品体验
-                  </p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  广州文讯信息科技有限公司（实习生）<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                    >2017.08 - 2018.12</span
-                  >
-                </p>
-                <div>
-                  <p>实习到转正</p>
-                  <p>参与公司数据分析管控系统，平安e采领航桥接系统的开发</p>
-                  <p>参与产品线scrum开发流程，确保所属需求按时高质量完成</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="Home_container__bCOhY">
-            <h2 class="Home_title__T09hD">项目经历</h2>
-            <ul>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  ICARE自愿报告平台（移动端、网页端、后台管理）<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                  ></span>
-                </p>
-                <p class="Home_tech__lXvBl">
-                  Vue3.2 + Typescript + Vite4.3 + Axios/fetch + Pinia
-                </p>
-                <p>
-                  一个类知乎，面向内容发布、问答互动与内容管理的社区平台，覆盖门户端、后台管理端及移动端。
-                </p>
-                <div>
-                  <p>
-                    1<!-- -->.<!-- -->负责多端核心功能开发（门户端 / 管理端 /
-                    移动端），完成内容展示与互动相关功能
-                  </p>
-                  <p>
-                    2<!-- -->.<!-- -->使用 socket.io
-                    实现系统消息实时推送，并驱动页面状态联动更新
-                  </p>
-                  <p>
-                    3<!-- -->.<!-- -->使用 ECharts
-                    搭建后台管理端首页数据看板开发，完成多类统计图表与数据展示模块实现
-                  </p>
-                  <p>
-                    4<!-- -->.<!-- -->负责年度报告与周报模块开发，使用 CSS3
-                    transform、transition、keyframes
-                    实现翻页交互、图文动画及长页面展示
-                  </p>
-                  <p>
-                    5<!-- -->.<!-- -->针对长页面数据展示场景，采用使用
-                    IntersectionObserver + 按需加载策略优化页面加载节奏
-                  </p>
-                  <p>
-                    6<!-- -->.<!-- -->负责移动端列表与详情页开发，实现触底加载、骨架屏及滚动位置保留，提升浏览连续性
-                  </p>
-                  <p>
-                    7<!-- -->.<!-- -->梳理并实现内容审核多状态流转逻辑，提升复杂业务流程的可维护性与扩展性
-                  </p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  滴普科技官网4.0<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                  ></span>
-                </p>
-                <p class="Home_tech__lXvBl">Nuxt.js</p>
-                <p>滴普科技官网重构项目，支持品牌展示与 SEO 优化。</p>
-                <div>
-                  <p>
-                    1<!-- -->.<!-- -->参与官网核心页面开发与公共模块建设，提升页面复用性与整体开发效率
-                  </p>
-                  <p>
-                    2<!-- -->.<!-- -->基于 UI
-                    设计稿完成高保真页面还原，落地过渡动画、交互动效及视觉细节处理，提升官网展示质感
-                  </p>
-                  <p>
-                    3<!-- -->.<!-- -->支持 SSR 场景下页面开发，配合落地 SEO
-                    相关需求，提升搜索引擎收录与页面可见性
-                  </p>
-                  <p>
-                    4<!-- -->.<!-- -->接入神策埋点体系，完成页面曝光、点击及核心转化路径埋点，为运营分析与优化提供数据支持
-                  </p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  广东农信移动营销平台<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                  ></span>
-                </p>
-                <p class="Home_tech__lXvBl">
-                  Vue2 + Cordova + Vux + Axios + Vuex
-                </p>
-                <p>
-                  基于混合开发模式构建，支持客户信息采集、消费贷申请、电子签约及授权等核心流程，实现业务闭环的平板端平台。
-                </p>
-                <div>
-                  <p>
-                    1<!-- -->.<!-- -->基于 Cordova 混合开发架构，打通 Web
-                    与原生能力，支撑业务在平板设备上的完整运行
-                  </p>
-                  <p>
-                    2<!-- -->.<!-- -->抽象并封装原生能力调用层（身份证读取、银行卡识别、签名背夹等），形成统一调用规范（类
-                    SDK 思路），降低业务层与原生层耦合
-                  </p>
-                  <p>
-                    3<!-- -->.<!-- -->设计通用组件体系（表单、信息展示等），提升模块复用性与开发一致性
-                  </p>
-                  <p>
-                    4<!-- -->.<!-- -->基于 vw 适配方案 + PostCSS
-                    自动转换，实现多尺寸平板设备一致性布局
-                  </p>
-                  <p>
-                    5<!-- -->.<!-- -->引入 Skeleton 骨架屏
-                    优化首屏加载体验，降低用户等待感知
-                  </p>
-                  <p>
-                    6<!-- -->.<!-- -->使用 Mock.js
-                    支持前后端解耦开发，提高开发效率
-                  </p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">
-                  杂锦数据中间层服务<!-- -->    <span
-                    class="Home_datetime__Xjom8"
-                  ></span>
-                </p>
-                <p class="Home_tech__lXvBl">Node.js</p>
-                <p>
-                  基于 Node.js
-                  开发的数据中间层服务，对接第三方股票、基金接口并进行数据整合，对外提供统一接口并支持机器人调用
-                </p>
-                <div>
-                  <p>
-                    1<!-- -->.<!-- -->对接外部股票、基金数据接口，完成数据获取与结构整理
-                  </p>
-                  <p>
-                    2<!-- -->.<!-- -->实现简单接口服务，对外提供统一数据格式
-                  </p>
-                  <p>3<!-- -->.<!-- -->支持 QQ 机器人调用，实现数据推送</p>
-                  <p>4<!-- -->.<!-- -->完成数据请求与返回流程处理</p>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <div class="Home_container__bCOhY">
-            <h2 class="Home_title__T09hD">个人作品</h2>
-            <ul>
-              <li>
-                <p class="Home_work-name__ZeVtS">手机展示页或官网动效demo</p>
-                <p class="Home_tech__lXvBl">Nuxt4 + css3</p>
-                <p>
-                  <a href="https://yxc5354.github.io/yxc-resume2026-nuxt4"
-                    >https://yxc5354.github.io/yxc-resume2026-nuxt4</a
-                  >
-                </p>
-                <div>
-                  <p>
-                    手机展示页动效复刻，使用Nuxt4搭建，CSS 变量 + position:
-                    sticky + 滚动进度计算，实现多段式 Scroll-driven 官网动画
-                    （有GSAP + ScrollTrigger版本，效果一样）
-                  </p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">可视化平台简单demo</p>
-                <p class="Home_tech__lXvBl">
-                  vue3.5.2 + vite8.0.8 + ant-design-vue + Echarts6.0.0 +
-                  Three.js0.184.0
-                </p>
-                <p>
-                  <a href="https://yxc5354.github.io/yxc-wp-demo"
-                    >https://yxc5354.github.io/yxc-wp-demo</a
-                  >
-                </p>
-                <div>
-                  <p>使用Trae IDE 搭建的 Vue3 后台演示项目</p>
-                  <p>
-                    Ant Design Vue 组件库构建基本Layout、导航栏、表格等基础组件
-                  </p>
-                  <p>
-                    ECharts 组件封装
-                    （基于Vue3的封装，支持基本的图表展示与交互）
-                  </p>
-                  <p>
-                    Three.js
-                    组件封装（基于Vue3的封装，支持基本的3D场景展示与交互）
-                  </p>
-                </div>
-              </li>
-              <li>
-                <p class="Home_work-name__ZeVtS">React系列补偿项目</p>
-                <p class="Home_tech__lXvBl">React19.2 + vite8.0.4</p>
-                <p>
-                  <a href="https://yxc5354.github.io/yxc-react-demo2026"
-                    >https://yxc5354.github.io/yxc-react-demo2026</a
-                  >
-                </p>
-                <div>
-                  <p>
-                    Hooks实践（useEffect/useMemo/useCallback/useReducer）、组件通信优化（useCallback
-                    + memo）、全局状态管理（Zustand +
-                    Context主题切换）、数据请求（@tanstack/react-query +
-                    axios）、路由鉴权（react-router-dom）等核心功能实践
-                  </p>
-                </div>
-              </li>
-            </ul>
-          </div>
-        </main>
-        <footer class="Home_footer____T7K"></footer>
+    <!-- ════════════ HEADER ════════════ -->
+    <div class="header">
+      <h1>叶肇才</h1>
+      <div class="subtitle">前端开发工程师</div>
+      <div class="meta-row">
+        <span>高级前端开发工程师（广州/远程）</span>
+      </div>
+      <div class="meta-row" style="margin-top: 6px">
+        <span>📞 15622281238</span>
+        <span class="sep">|</span>
+        <span>📧 565294508@qq.com</span>
+        <span class="sep">|</span>
+        <span>工作年限：8年</span>
+        <span class="sep">|</span>
+        <span
+          >学历：本科 · 广州软件学院（原广州大学华软软件学院） ·
+          软件工程（2018届，学信网可查）</span
+        >
       </div>
     </div>
-    <script id="__NEXT_DATA__" type="application/json">
-      {
-        "props": { "pageProps": {} },
-        "page": "/",
-        "query": {},
-        "buildId": "nXh7iDkKmDngM44Drni1J",
-        "assetPrefix": ".",
-        "nextExport": true,
-        "autoExport": true,
-        "isFallback": false,
-        "scriptLoader": []
-      }
-    </script>
+
+    <!-- ════════════ 个人总结 ════════════ -->
+    <div class="section">
+      <h2>个人总结</h2>
+      <div class="summary-block">
+        8年前端开发经验，Vue 技术栈深入，React 具备独立项目开发能力，具备从 0 到
+        1
+        搭建大型项目全流程能力。近4年在南航驻场期间主导多个核心系统的前端架构设计、任务拆解与团队
+        Code
+        Review，累计交付项目覆盖移动端、Web端、管理后台等多端场景。擅长复杂业务的状态流转设计、实时数据可视化及性能优化，具备跨端开发（UniApp/Taro）与
+        SSR（Nuxt/Next）实战经验。主动引入 AI
+        工具辅助开发，持续关注工程质量与交付效率。
+      </div>
+    </div>
+
+    <!-- ════════════ 技术能力 ════════════ -->
+    <div class="section">
+      <h2>技术能力</h2>
+      <div class="skill-list">
+        <div class="skill-item">
+          <span class="skill-label">语言与基础</span>
+          <span class="skill-desc"
+            >JavaScript（ES6+）、TypeScript、HTML5、CSS3</span
+          >
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">框架</span>
+          <span class="skill-desc"
+            >Vue2/Vue3（主力，含 Pinia）、React Hooks（有实战项目，含 Zustand +
+            react-query）、Nuxt.js、Next.js</span
+          >
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">跨端</span>
+          <span class="skill-desc">UniApp、Taro（H5 + 小程序）</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">工程化</span>
+          <span class="skill-desc">Vite、Webpack</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">UI 组件库</span>
+          <span class="skill-desc"
+            >Element Plus、Vant、Naive UI、Ant Design
+            Vue，具备基于业务二次封装能力</span
+          >
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">数据可视化</span>
+          <span class="skill-desc"
+            >ECharts（含 Vue3 封装）、Three.js（基础3D场景）</span
+          >
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">实时通信</span>
+          <span class="skill-desc"
+            >WebSocket（socket.io），支持实时消息推送与数据同步</span
+          >
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">后端基础</span>
+          <span class="skill-desc">Node.js 接口开发与数据处理</span>
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">工具</span>
+          <span class="skill-desc"
+            >Git、ChatGPT / GitHub Copilot 辅助开发、神策埋点</span
+          >
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════ 工作经历 ════════════ -->
+    <div class="section">
+      <h2>工作经历</h2>
+
+      <!-- 南航 -->
+      <div class="exp-block">
+        <div class="exp-header">
+          <span class="company">中国南方航空（驻场开发）</span>
+          <span class="duration">2022.04 — 2026.04（4年）</span>
+        </div>
+        <div class="exp-desc">
+          南航核心业务系统前端开发，从 0 到 1
+          主导多端项目交付，承担技术架构设计及团队管理职责。
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">ICARE 自愿报告平台（从0构建）</div>
+          <ul>
+            <li>
+              作为前端负责人从零搭建项目，覆盖门户端、管理后台端及移动端，支持内容发布、问答互动、内容管理等核心业务
+            </li>
+            <li>
+              设计并实现内容审核多状态流转逻辑，覆盖超过 8
+              种审核状态及其转换规则，显著提升复杂业务流程的可维护性
+            </li>
+            <li>
+              基于 socket.io
+              实现系统消息实时推送方案，消息延迟控制在秒级，并驱动页面状态联动更新
+            </li>
+            <li>
+              使用 ECharts 搭建管理后台首页数据看板，完成超过 10
+              类统计图表与数据展示模块
+            </li>
+            <li>
+              独立完成年度报告与周报模块开发，通过 CSS3 transform / transition /
+              keyframes 实现翻页交互与图文动画
+            </li>
+            <li>
+              针对长页面数据展示场景，采用 IntersectionObserver +
+              按需加载策略，首屏渲染时间降低约 40%
+            </li>
+            <li>
+              移动端实现触底加载、骨架屏及滚动位置保留，保障用户浏览连续性
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">LeAPS 云机务系统（Vue2）</div>
+          <ul>
+            <li>
+              负责日常维护与版本迭代，处理多个核心模块的功能需求与历史问题修复
+            </li>
+          </ul>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">南航 e 家管理中台（React）</div>
+          <ul>
+            <li>跨技术栈支援 React 项目中台模块实现及历史问题修复</li>
+          </ul>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">发动机管理项目迁移</div>
+          <ul>
+            <li>主导将历史项目迁移至新架构框架，保障业务平稳过渡</li>
+          </ul>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">团队管理</div>
+          <ul>
+            <li>
+              主导前端开发规范制定与 Code Review
+              机制落地，统一团队代码风格与质量标准
+            </li>
+            <li>负责核心需求技术架构拆解、任务分配与排期把控</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 滴普 -->
+      <div class="exp-block">
+        <div class="exp-header">
+          <span class="company">广州滴普科技有限公司</span>
+          <span class="duration">2020.10 — 2021.08</span>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">滴普科技官网 4.0 重构项目（Nuxt.js）</div>
+          <ul>
+            <li>主导官网核心页面开发与公共模块建设，页面复用率提升约 30%</li>
+            <li>
+              基于 UI
+              设计稿完成高保真页面还原，落地过渡动画与交互动效，提升官网展示品质
+            </li>
+            <li>
+              在 SSR 场景下完成页面开发并配合落地 SEO
+              优化，搜索引擎收录量提升明显
+            </li>
+            <li>
+              接入神策埋点体系，覆盖页面曝光、点击及核心转化路径，为运营数据决策提供支撑
+            </li>
+            <li>
+              参与需求评审与任务拆分，定期组织技术分享，推动团队整体效率提升
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 链能 -->
+      <div class="exp-block">
+        <div class="exp-header">
+          <span class="company">广州链能科技有限公司</span>
+          <span class="duration">2019.09 — 2020.09</span>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">
+            智慧能源管理平台（Vue2 + Element UI + ECharts + Socket.io）
+          </div>
+          <div class="exp-desc">
+            这是一个面向能源监测与分析的实时数据展示平台，用于企业用电数据的监控分析与节能方案产出。
+          </div>
+          <ul>
+            <li>
+              基于 Socket.io
+              对接电表等底层设备消息推送，实现高频数据的实时无延迟刷新
+            </li>
+            <li>
+              主导前端视觉重构，结合新版品牌配色方案，封装高复用通用数据展示组件，同类页面交付速度提升约
+              50%
+            </li>
+            <li>
+              建立公共逻辑抽离与动态配置机制，支撑平台多类设备数据看板的快速扩展
+            </li>
+            <li>
+              将复杂的设备能耗数据转化为直观可视化看板，有效支撑业务端节能方案落地
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 赞同 -->
+      <div class="exp-block">
+        <div class="exp-header">
+          <span class="company">赞同科技股份有限公司</span>
+          <span class="duration">2018.12 — 2019.09</span>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">广东农信移动营销平台</div>
+          <ul>
+            <li>负责核心银行业务线前端开发与交付</li>
+            <li>推动需求按期交付，高度配合测试团队完成严格的验收流程</li>
+            <li>基于一线用户反馈持续优化产品体验</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 文讯 -->
+      <div class="exp-block">
+        <div class="exp-header">
+          <span class="company">广州文讯信息科技有限公司</span>
+          <span class="duration">2017.08 — 2018.12（实习至转正）</span>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">
+            数据分析管控系统 &amp; 平安 e 采领航桥接系统
+          </div>
+          <ul>
+            <li>参与公司数据分析管控系统及桥接系统的前端开发</li>
+            <li>遵循 Scrum 开发流程，确保需求按时高质量完成</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ════════════ 项目作品 ════════════ -->
+    <div class="section">
+      <h2>项目作品</h2>
+      <div class="project-links">
+        <a
+          class="project-link"
+          href="https://yxc5354.github.io/yxc-portfolio/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="label">个人作品集</span>
+          yxc5354.github.io/yxc-portfolio
+        </a>
+        <a
+          class="project-link"
+          href="https://yxc5354.github.io/yxc-resume/"
+          target="_blank"
+          rel="noopener"
+        >
+          <span class="label">在线简历</span>
+          yxc5354.github.io/yxc-resume
+        </a>
+      </div>
+      <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 10px">
+        含简历网站、社区平台、后台管理系统、物流Demo、React技术展示等 6 个项目
+      </p>
+    </div>
   </body>
 </html>
