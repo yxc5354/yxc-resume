@@ -417,7 +417,9 @@
         </div>
         <div class="skill-item">
           <span class="skill-label">工程化</span>
-          <span class="skill-desc">Vite、Webpack、Git</span>
+          <span class="skill-desc"
+            >Vite、Webpack、Git、qiankun、多环境变量配置</span
+          >
         </div>
         <div class="skill-item">
           <span class="skill-label">UI 组件库</span>
@@ -440,7 +442,16 @@
         </div>
         <div class="skill-item">
           <span class="skill-label">后端基础</span>
-          <span class="skill-desc">Node.js 接口开发与数据处理</span>
+          <span class="skill-desc"
+            >Node.js （Express、Koa2），具备接口开发与数据处理能力</span
+          >
+        </div>
+        <div class="skill-item">
+          <span class="skill-label">部署运维</span>
+          <span class="skill-desc"
+            >Jenkins、GitLab CI/CD、Nginx（反向代理、跨域配置、SPA
+            路由适配）、GitHub Pages</span
+          >
         </div>
         <div class="skill-item">
           <span class="skill-label">AI 提效</span>
@@ -473,6 +484,9 @@
             <li>
               从零搭建项目，覆盖门户端、管理后台端及移动端，支持内容发布、问答互动、内容管理等核心业务
             </li>
+            <li>
+              搭建多环境构建体系（开发/测试/生产），通过环境变量注入实现差异化配置与一键切换
+            </li>
             <!-- <li>
               设计并实现内容审核多状态流转逻辑，覆盖超过 8
               种审核状态及其转换规则，显著提升复杂业务流程的可维护性
@@ -500,10 +514,18 @@
         </div>
 
         <div class="exp-project">
-          <div class="proj-name">LeAPS 云机务系统（Vue2）</div>
+          <div class="proj-name">LeAPS 云机务系统（Vue2 + Element UI）</div>
           <ul>
+            <li>负责系统日常维护与版本迭代，参与核心业务模块的功能开发</li>
             <li>
-              负责日常维护与版本迭代，处理多个核心模块的功能需求与历史问题修复
+              基于 Element UI
+              进行业务组件二次封装（动态表单、审批操作栏），适配工作流多节点差异化配置
+            </li>
+            <li>
+              处理工作流节点状态流转逻辑（草稿→提交→审批→驳回→完成），保障多角色协同场景下的操作一致性
+            </li>
+            <li>
+              基于 Jenkins 完成前端构建与发布，参与 CI/CD 流水线的日常维护
             </li>
           </ul>
         </div>
@@ -518,7 +540,10 @@
         <div class="exp-project">
           <div class="proj-name">发动机管理项目迁移</div>
           <ul>
-            <li>主导将历史项目迁移至新架构框架，保障业务平稳过渡</li>
+            <li>
+              基于 Vue3 + Vite 搭建项目框架，制定目录结构规范与路由设计，配合
+              qiankun 接入微前端体系
+            </li>
           </ul>
         </div>
 
@@ -559,6 +584,34 @@
             <li>
               参与需求评审与任务拆分，定期组织技术分享，推动团队整体效率提升
             </li>
+            <li>基于 GitLab CI/CD 完成前端自动化构建与部署</li>
+          </ul>
+        </div>
+
+        <div class="exp-project">
+          <div class="proj-name">滴普美业（Taro 2.0 + React）</div>
+          <div class="exp-desc">
+            美容行业多端电商平台，覆盖 H5 与微信小程序。
+          </div>
+          <ul>
+            <li>
+              基于 Taro 2.0 独立完成全站 UI 开发，100% 还原设计稿，处理 rpx 转
+              rem 精度差异、scroll-view 替代 overflow 等跨端样式问题
+            </li>
+            <li>
+              使用 <code>TARO_ENV</code> 条件编译分离 H5
+              与小程序差异化逻辑（微信授权登录、支付跳转、设备 API
+              调用），核心代码复用率达 85% 以上
+            </li>
+            <li>
+              封装跨端 API 适配层，统一缓存、定位、相册等 Native
+              能力调用，消除业务层 <code>isWeapp</code> 重复判断
+            </li>
+            <li>
+              实现小程序分享链路（<code>useShareAppMessage</code>），H5 端走
+              JSSDK 分享方案，保持两端体验一致
+            </li>
+            <li>修复历史遗留缺陷并持续迭代新功能</li>
           </ul>
         </div>
       </div>
@@ -653,6 +706,50 @@
     <!-- ════════════ 项目作品 ════════════ -->
     <div class="section">
       <h2>项目作品</h2>
+
+      <div class="exp-project">
+        <div class="proj-name">杂锦数据中间层服务（Node.js + Express）</div>
+        <div class="exp-desc">
+          基于 Node.js 的数据中间层，对接第三方股票、基金 API
+          并进行数据清洗整合，对外提供统一 JSON 接口，支持 QQ
+          机器人实时调用与数据推送。
+        </div>
+        <ul>
+          <li>对接第三方股票、基金数据接口，完成抓取、清洗与结构化整理</li>
+          <li>
+            基于 Express 构建 RESTful
+            接口服务，对外暴露统一数据格式，屏蔽底层多源 API 差异
+          </li>
+          <li>通过 Nginx 反向代理转发请求至 Node 服务，实现域名统一入口</li>
+          <li>支持 QQ 机器人调用，实现金融数据实时查询与推送</li>
+        </ul>
+      </div>
+
+      <div class="exp-project">
+        <div class="proj-name">
+          SKGirl 内容管理后台（Vue 3 + TypeScript + Naive UI + Pinia）
+        </div>
+        <div class="exp-desc">
+          独立接单并交付的 VR
+          视频社区管理后台，负责视频帖子管理、评论审核、用户及权限控制，已上线使用。
+        </div>
+        <ul>
+          <li>
+            对接阿里云 OSS + MPS
+            转码流程，后端管理视频帖子的转码状态（未转码→转码中→转码成功）、显示隐藏、置顶排序及违规标记
+          </li>
+          <li>
+            基于 Pinia + Vue Router 实现 RBAC 权限体系，token + 菜单 code
+            双重校验
+          </li>
+          <li>独立完成评论管理（搜索、游客可见控制）、用户详情查看等模块</li>
+          <li>
+            独立完成服务器环境搭建（Nginx
+            安装、反向代理配置、静态资源部署），实现全流程交付
+          </li>
+        </ul>
+      </div>
+
       <div class="project-links">
         <a
           class="project-link"
